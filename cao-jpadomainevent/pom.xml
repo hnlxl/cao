@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>xyz.hnlxl.cao</groupId>
+		<artifactId>cao-parent</artifactId>
+		<version>${revision}</version>
+		<relativePath>../cao-parent</relativePath>
+	</parent>
+	<artifactId>cao-jpadomainevent</artifactId>
+	<name>cao-jpadomainevent</name>
+	<description>Support packages about domain events what is based on JPA implementation . 关于基于 JPA 实现的领域事件的支持包。 </description>
+
+	<dependencies>
+		<dependency>
+			<groupId>xyz.hnlxl.cao</groupId>
+			<artifactId>cao-domainbase</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>xyz.hnlxl.cao</groupId>
+			<artifactId>cao-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>xyz.hnlxl.cao</groupId>
+			<artifactId>cao-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-jpamodelgen</artifactId>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.awaitility</groupId>
+			<artifactId>awaitility</artifactId>
+			<scope>test</scope>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+</project>

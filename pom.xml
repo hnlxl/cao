@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>xyz.hnlxl.cao</groupId>
+	<artifactId>cao-project</artifactId>
+	<version>${revision}</version>
+	<packaging>pom</packaging>
+	<name>cao-project</name>
+	<description><![CDATA[
+Project "Chaos and Order", the Support packages for Java development.
+
+Java 开发的支持包，代号为“混乱与秩序”。
+
+We are Assassins when the Templars are autarchic, otherwise we are Templars 
+]]>
+	</description>
+	<properties>
+		<revision>0.1-SNAPSHOT</revision>
+		
+		<!-- The version of Jackson's modules, needs to be same to the version of Jackson, 
+		which is managed by spring-boot-starter-parent -->
+		<jackson-module-revision>2.13.1</jackson-module-revision>
+		
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<modules>
+		<module>cao-parent</module>
+		<module>cao-util</module>
+		<module>cao-domainbase</module>
+		<module>cao-jpa</module>
+		<module>cao-jpadomainevent</module>
+	</modules>
+
+</project>

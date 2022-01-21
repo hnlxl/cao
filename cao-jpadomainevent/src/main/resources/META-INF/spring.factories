@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  xyz.hnlxl.cao.autoconfigure.jpadomainevent.VerifyingDomainEventsPublishedInterceptorAutoConfiguration,\
+  xyz.hnlxl.cao.autoconfigure.jpadomainevent.JpaDomainEventSupportRepoAutoConfiguration,\
+  xyz.hnlxl.cao.autoconfigure.jpadomainevent.JpaDomainEventSupportBeanAutoConfiguration,\
+  xyz.hnlxl.cao.autoconfigure.jpadomainevent.JpaDomainEventSupportListenerAutoConfiguration

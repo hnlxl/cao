@@ -17,14 +17,17 @@
 		<dependency>
 			<groupId>xyz.hnlxl.cao</groupId>
 			<artifactId>cao-domainbase</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>xyz.hnlxl.cao</groupId>
 			<artifactId>cao-jpa</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>xyz.hnlxl.cao</groupId>
 			<artifactId>cao-util</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>

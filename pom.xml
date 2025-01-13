@@ -24,11 +24,6 @@ We are Assassins when the Templars are autarchic, otherwise we are Templars
 	<properties>
 		<revision>0.1-SNAPSHOT</revision>
 		
-		<!-- The version of Jackson's modules, needs to be same to the version of Jackson, 
-		which is managed by spring-boot-starter-parent -->
-		<!-- Maybe not need, see Jackson BOM -->
-		<jackson-module-revision>2.18.2</jackson-module-revision>
-		
 		<java.version>21</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -41,5 +36,35 @@ We are Assassins when the Templars are autarchic, otherwise we are Templars
 		<module>cao-jpa</module>
 		<module>cao-jpadomainevent</module>
 	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<configuration>
+					<updatePomFile>true</updatePomFile>
+					<flattenMode>resolveCiFriendliesOnly</flattenMode>
+				</configuration>
+				<executions>
+					<execution>
+						<id>flatten</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>flatten</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>flatten.clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

@@ -13,40 +13,18 @@
 	<name>cao-parent</name>
 	<description>Parent pom</description>
 	<dependencyManagement>
+		<!-- Do not manage dependencies of module project here, because this is superfluous and also 
+		you have to use placeholders, which cannot be resolved when flattenMode is resolveCiFriendliesOnly.
+		You should use ${project.version} to explicitly define dependencies on module projects. 
+		See <https://maven.apache.org/guides/mini/guide-maven-ci-friendly.html> for more infomation. 
+		(Unfortunately, ${project.version} still cannot be resolved, but no blocking for now.)
+		
+		Note that this dependencyManagement is for this project, not for projects that depend on it. 
+		You need to create a separate BOM project to support the latter.
+		-->
+		
 		<dependencies>
-
-			<dependency>
-				<groupId>com.fasterxml.jackson.datatype</groupId>
-				<artifactId>jackson-datatype-jsr310</artifactId>
-				<version>${jackson-module-revision}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.datatype</groupId>
-				<artifactId>jackson-datatype-jdk8</artifactId>
-				<version>${jackson-module-revision}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>xyz.hnlxl.cao</groupId>
-				<artifactId>cao-util</artifactId>
-				<version>${revision}</version>
-			</dependency>
-			<dependency>
-				<groupId>xyz.hnlxl.cao</groupId>
-				<artifactId>cao-domainbase</artifactId>
-				<version>${revision}</version>
-			</dependency>
-			<dependency>
-				<groupId>xyz.hnlxl.cao</groupId>
-				<artifactId>cao-jpa</artifactId>
-				<version>${revision}</version>
-			</dependency>
-			<dependency>
-				<groupId>xyz.hnlxl.cao</groupId>
-				<artifactId>cao-jpadomainevent</artifactId>
-				<version>${revision}</version>
-			</dependency>
-
+		
 		</dependencies>
 	</dependencyManagement>
 

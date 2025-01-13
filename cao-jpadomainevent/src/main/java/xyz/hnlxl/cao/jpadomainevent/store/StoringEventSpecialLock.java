@@ -1,7 +1,7 @@
 package xyz.hnlxl.cao.jpadomainevent.store;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 /**
  * Special lock to solve concurrency problems when storing event.

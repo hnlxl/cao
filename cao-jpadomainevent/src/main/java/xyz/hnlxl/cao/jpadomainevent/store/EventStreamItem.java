@@ -1,12 +1,12 @@
 package xyz.hnlxl.cao.jpadomainevent.store;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import java.time.LocalDateTime;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedDate;

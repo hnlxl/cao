@@ -1,8 +1,8 @@
 package xyz.hnlxl.cao.autoconfigure.jpadomainevent.ezio;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import java.util.Optional;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

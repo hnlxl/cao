@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
-import org.hibernate.EmptyInterceptor;
+import org.hibernate.Interceptor;
 import org.springframework.data.domain.DomainEvents;
 import org.springframework.data.util.AnnotationDetectionMethodCallback;
 import org.springframework.util.ReflectionUtils;
@@ -19,8 +19,7 @@ import xyz.hnlxl.cao.domainbase.DomainSupportException;
  * @author hnlxl at 2021/11/29
  *
  */
-public class VerifyingDomainEventsPublishedInterceptor extends EmptyInterceptor {
-  private static final long serialVersionUID = 1L;
+public class VerifyingDomainEventsPublishedInterceptor implements Interceptor {
   // TODO AbstractAggregateRoot // 现在是由我控制的，所以没必要再通过DomainEvents来提取聚合的domainEvents。
   // 应当通过特定方法或自定义注解来提取，以避免对@DomainEvents造成干扰。
 

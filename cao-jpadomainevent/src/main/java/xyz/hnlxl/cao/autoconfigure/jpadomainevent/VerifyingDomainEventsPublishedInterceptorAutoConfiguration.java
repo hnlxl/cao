@@ -23,7 +23,7 @@ public class VerifyingDomainEventsPublishedInterceptorAutoConfiguration {
   @Bean
   public HibernatePropertiesCustomizer hibernatePropertiesCustomizer() {
     return (hibernateProperties) -> {
-      hibernateProperties.put("hibernate.ejb.interceptor",
+      hibernateProperties.put("hibernate.session_factory.interceptor",
           new VerifyingDomainEventsPublishedInterceptor());
     };
   }

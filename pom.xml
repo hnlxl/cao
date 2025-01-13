@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.2</version>
+		<version>3.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>xyz.hnlxl.cao</groupId>
@@ -26,9 +26,10 @@ We are Assassins when the Templars are autarchic, otherwise we are Templars
 		
 		<!-- The version of Jackson's modules, needs to be same to the version of Jackson, 
 		which is managed by spring-boot-starter-parent -->
-		<jackson-module-revision>2.13.1</jackson-module-revision>
+		<!-- Maybe not need, see Jackson BOM -->
+		<jackson-module-revision>2.18.2</jackson-module-revision>
 		
-		<java.version>1.8</java.version>
+		<java.version>21</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
